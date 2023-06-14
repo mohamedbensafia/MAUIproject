@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MyReference.ViewModel"
+             xmlns:model="clr-namespace:MyReference.Model"
+             x:DataType="viewmodel:AddDbzCharacterViewModel"
+             x:Class="MyReference.View.AddDbzCharacter"
+             Title="AddDbzCharacter">
+    <StackLayout Spacing="10" Padding="20">
+        <Entry Placeholder="Id"
+           Text="{Binding DbzanimeNew.id}"
+           TextColor="Black"/>
+
+        <Entry Placeholder="Name"
+           Text="{Binding DbzanimeNew.name}"
+           TextColor="Black"/>
+
+        <Entry Placeholder="Race"
+           Text="{Binding DbzanimeNew.race}"
+           TextColor="Black"/>
+
+        <Entry Placeholder="Bio"
+           Text="{Binding DbzanimeNew.bio}"
+           TextColor="Black"/>
+
+        <Entry Placeholder="Attack"
+           Text="{Binding DbzanimeNew.attack}"
+           TextColor="Black"/>
+
+        <Entry Placeholder="Defense"
+           Text="{Binding DbzanimeNew.defense}"
+           TextColor="Black"/>
+
+        <Entry Placeholder="Abilities"
+           Text="{Binding DbzanimeNew.abilities}"
+           TextColor="Black"/>
+
+        <Entry Placeholder="Image"
+           Text="{Binding DbzanimeNew.img}"
+           TextColor="Black"/>
+
+        <Button Text="Add DBZ Character"
+            Command="{Binding AddCommand}"
+            BackgroundColor="#DB4437"
+            TextColor="White"
+            CornerRadius="10"/>
+    </StackLayout>
+
+</ContentPage>

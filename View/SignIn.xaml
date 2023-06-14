@@ -1,0 +1,33 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MyReference.ViewModel"
+             x:Class="MyReference.View.SignIn"
+             Title="SignIn"
+             x:Name="SignInPage">
+    <ContentPage.BindingContext>
+        <viewmodel:SignInViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label Text="Sign In" HorizontalOptions="Center" FontSize="Title" />
+
+        <Label Text="Login" />
+        <Entry  Placeholder="Enter your login" Margin="0,0,0,10" Text="{Binding LoginEntry}" />
+
+
+        <Label Text="Password" />
+        <Entry IsPassword="true" Placeholder="Enter your password" Margin="0,0,0,10" Text="{Binding Password}" />
+
+
+
+        <Button Text="Sign In" Margin="0,20,0,0" Command="{Binding InsertDBCommand}" />
+
+        <Label Text="You already have an account ?" Margin="0,0,0,10" />
+        <Button Text="Log In Here" Margin="0,10,0,0"  Command="{Binding GoToLoginPageCommand}"
+                CommandParameter="From Sign In Button" />
+    </StackLayout>
+</ContentPage>

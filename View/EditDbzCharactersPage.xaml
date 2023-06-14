@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MyReference.ViewModel"
+             xmlns:model="clr-namespace:MyReference.Model"
+             x:DataType="viewmodel:EditDbzCharactersViewModel"
+             x:Class="MyReference.View.EditDbzCharactersPage"
+             Title="EditDbzCharacters">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" WidthRequest="400">
+            <Label Text="Edit character"
+               FontSize="Large"
+               TextColor="Black"
+               HorizontalOptions="Center" />
+
+            <Frame CornerRadius="5"
+               BorderColor="Gray"
+               Padding="5"
+               Margin="0,20,0,0">
+                <Entry Placeholder="Enter Id"
+                   Text="{Binding DbzanimeUpdate.id}"/>
+            </Frame>
+
+            <Frame CornerRadius="5"
+               BorderColor="Gray"
+               Padding="5"
+               Margin="0,10,0,0">
+                <Entry Placeholder="Enter name"
+                   Text="{Binding DbzanimeUpdate.name}"/>
+            </Frame>
+
+            <Frame CornerRadius="5"
+               BorderColor="Gray"
+               Padding="5"
+               Margin="0,10,0,0">
+                <Entry Placeholder="Enter race"
+                   Text="{Binding DbzanimeUpdate.race}"/>
+            </Frame>
+
+            <Frame CornerRadius="5"
+               BorderColor="Gray"
+               Padding="5"
+               Margin="0,10,0,0">
+                <Entry Placeholder="Enter bio"
+                   Text="{Binding DbzanimeUpdate.bio}"/>
+            </Frame>
+
+            <Frame CornerRadius="5"
+               BorderColor="Gray"
+               Padding="5"
+               Margin="0,10,0,0">
+                <Entry Placeholder="Enter attack"
+                   Text="{Binding DbzanimeUpdate.attack}"/>
+            </Frame>
+
+            <Frame CornerRadius="5"
+               BorderColor="Gray"
+               Padding="5"
+               Margin="0,10,0,20">
+                <Entry Placeholder="Enter defense"
+                   Text="{Binding DbzanimeUpdate.defense}"/>
+            </Frame>
+
+            <Frame CornerRadius="5"
+               BorderColor="Gray"
+               Padding="5"
+               Margin="0,10,0,20">
+                <Entry Placeholder="Enter abilities"
+                   Text="{Binding DbzanimeUpdate.abilities}"/>
+            </Frame>
+
+            <Frame CornerRadius="5"
+               BorderColor="Gray"
+               Padding="5"
+               Margin="0,10,0,20">
+                <Entry Placeholder="Enter image"
+                   Text="{Binding DbzanimeUpdate.img}"/>
+            </Frame>
+
+            <Button Text="Edit"
+                Command="{Binding EditDbzCharactersCommand}"
+                BackgroundColor="Green"
+                TextColor="White"
+                WidthRequest="100"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+
+
+</ContentPage>

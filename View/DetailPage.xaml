@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyReference.View.DetailPage"
+             xmlns:viewmodel="clr-namespace:MyReference.ViewModel"
+             xmlns:model="clr-namespace:MyReference.Model"
+             x:DataType="viewmodel:DetailViewModel"
+             x:Name="MyPage">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackLayout Padding="20" WidthRequest="400">
+            <Label Text="Search a character"
+               TextColor="Black"
+               FontSize="Large"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,20,0,10"/>
+
+
+            <VerticalStackLayout Spacing="10">
+
+                <Label Text="{Binding DbzAnimeSearch.id, StringFormat='ID: {0}'}"
+                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding DbzAnimeSearch.name, StringFormat='Name: {0}'}"
+                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding DbzAnimeSearch.race, StringFormat='Race: {0}'}"
+                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding DbzAnimeSearch.bio, StringFormat='Bio: {0}'}"
+                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding DbzAnimeSearch.attack, StringFormat='Attack: {0}'}"
+                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding DbzAnimeSearch.defense, StringFormat='Defense: {0}'}"
+                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding DbzAnimeSearch.abilities, StringFormat='Abilities: {0}'}"
+                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding DbzAnimeSearch.img, StringFormat='Image: {0}'}"
+                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+                
+
+            </VerticalStackLayout>
+
+
+        </StackLayout>
+    </Grid>
+
+
+</ContentPage>
+    
+    
+    
